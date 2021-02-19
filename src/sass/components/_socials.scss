@@ -1,0 +1,16 @@
+.socials-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.socials-link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+}

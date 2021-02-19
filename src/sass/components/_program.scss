@@ -1,0 +1,82 @@
+.program-wrap {
+  transform: translateY(-60px);
+}
+
+.program {
+  padding-top: 15px;
+  padding-bottom: 25px;
+
+  @include for-size(tablet) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include for-size(tablet-only) {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+}
+.program-title {
+  font-size: inherit;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.program-list {
+  padding-left: 48px;
+  padding-right: 48px;
+
+  @include for-size(tablet) {
+    display: flex;
+    margin-left: -20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.program-item {
+  position: relative;
+  padding: 10px 18px 42px;
+  margin-bottom: 37px;
+  border-radius: 10px;
+  background-image: var(--dashed-border);
+
+  @include for-size(tablet) {
+    flex-basis: calc(100% / 3 - 20px);
+    margin-left: 20px;
+    margin-bottom: 42px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 20px;
+    padding-right: 90px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--main-text-cl);
+    background-image: url(../images/icon/plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include for-size(desktop) {
+      bottom: 50%;
+      right: 20px;
+      transform: translate(0, 50%);
+    }
+  }
+}

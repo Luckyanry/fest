@@ -1,0 +1,33 @@
+.footer {
+  background: var(--footer-bg);
+  color: var(--dark-bg-text);
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.widget-area {
+  align-items: flex-start;
+}
+
+.widget-box {
+  @include for-size(tablet) {
+    --grid-item: 2;
+  }
+  @include for-size(desktop) {
+    --grid-item: 4;
+  }
+}
+
+.widget-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #fff;
+}

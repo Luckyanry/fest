@@ -1,0 +1,40 @@
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 17px 18px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: center;
+  color: var(--button-text-cl);
+  background-color: var(--accent-cl);
+  transition: 0.3s linear;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--accent-dark-cl);
+  }
+}
+
+.btn-float {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+
+.btn-small {
+  padding: 9px 20px;
+  border-radius: 8px;
+}
+
+.btn-accent {
+  background-color: var(--main-text-cl);
+
+  &:hover,
+  &:focus {
+    background-color: #000000;
+  }
+}

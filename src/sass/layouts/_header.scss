@@ -1,0 +1,35 @@
+.page-header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .contacts {
+    margin-left: auto;
+  }
+
+  .contacts-list {
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+  }
+
+  .contacts-title {
+    display: none;
+
+    @include for-size(desktop) {
+      display: block;
+    }
+  }
+
+  .btn:not(.btn-accent) {
+    margin-left: 20px;
+
+    @include for-size(mobile-only) {
+      display: none;
+    }
+  }
+}
