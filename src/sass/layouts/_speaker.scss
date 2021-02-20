@@ -1,0 +1,108 @@
+.speakers-list {
+  padding-top: 50px;
+}
+
+.speakers-item {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-top: 1px solid #bdbdbd;
+  letter-spacing: 0.05em;
+
+  @include for-size(tablet) {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @include for-size(tablet-only) {
+    flex-wrap: wrap;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #bdbdbd;
+  }
+}
+
+.speakers-img-wrap {
+  position: relative;
+  flex-shrink: 0;
+
+  margin-right: 30px;
+
+  @include for-size(desktop) {
+    flex-basis: calc((100% - 60px) / 12 * 2);
+  }
+
+  &:before {
+    content: 'Tech';
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    padding: 2px 20px 2px 14px;
+    background-image: url(../images/icon/lable.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 2;
+    color: #ffffff;
+  }
+}
+
+.speakers-content {
+  @include for-size(tablet-only) {
+    order: 3;
+    width: 100%;
+  }
+
+  flex-grow: 1;
+}
+
+.speakers-theme {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+  margin-bottom: 25px;
+}
+
+.speakers-link {
+  display: inline-block;
+  margin-top: 25px;
+  font-weight: 700;
+}
+
+.speakers-position {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.43;
+}
+
+.speakers-time {
+  flex-shrink: 0;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #000000;
+  order: 2;
+
+  @include for-size(tablet-only) {
+    padding-top: 20px;
+  }
+
+  @include for-size(desktop) {
+    flex-basis: calc((100% - 60px) / 12 * 3);
+    margin-left: 30px;
+  }
+}
+
+.speakers-item-column:not(:last-child) {
+  margin-bottom: 50px;
+
+  @include for-size(desktop) {
+    margin-bottom: 0;
+  }
+}

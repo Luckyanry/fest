@@ -1,0 +1,56 @@
+.benefits {
+  background-color: var(--dark-bg);
+  color: #fff;
+}
+
+.benefits-list {
+  padding-top: 30px;
+  counter-reset: item;
+}
+
+.benefits-item {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 24px;
+  padding-left: 60px;
+
+  @include for-size(tablet) {
+    --grid-item: 2;
+  }
+
+  @include for-size(desktop) {
+    --grid-item: 3;
+  }
+
+  &::before {
+    counter-increment: item;
+    content: counter(item);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 0.74;
+    color: var(--blue);
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  & > p {
+    position: relative;
+    z-index: 2;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 0;
+      transform: translate(-100%, 3px);
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-left: 10px solid var(--accent-cl);
+      border-bottom: 7px solid transparent;
+    }
+  }
+}
