@@ -1,0 +1,23 @@
+.menu {
+  display: none;
+
+  @include for-size(desktop) {
+    display: inline-flex;
+  }
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 80px;
+}
+
+.menu-link {
+  display: inline-block;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}

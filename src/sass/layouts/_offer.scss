@@ -1,0 +1,27 @@
+.offer {
+  .content-box {
+    &:first-child {
+      margin-bottom: 100px;
+    }
+    @include for-size(desktop) {
+      &:last-child {
+        padding-left: 100px;
+      }
+    }
+  }
+  .small-title:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .offer-title-icon:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-top: 116px;
+    margin-bottom: 50px;
+    background-image: url(../images/emoji/offer-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

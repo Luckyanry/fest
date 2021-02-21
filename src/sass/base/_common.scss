@@ -72,7 +72,33 @@ img {
 
 .title {
   font-weight: 700;
+  text-transform: uppercase;
+}
 
-  @include for-size(desktop) {
+.section-title {
+  font-size: 36px;
+  line-height: 1.39;
+  letter-spacing: 0.2em;
+  margin-bottom: 50px;
+}
+
+.small-title {
+  font-size: 24px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+}
+
+.accent-text {
+  color: var(--accent-cl);
+}
+
+@include for-size(desktop) {
+  .flexbox {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content-box {
+    width: calc((100% - 30px) / 2);
   }
 }

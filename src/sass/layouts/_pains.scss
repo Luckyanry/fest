@@ -1,0 +1,48 @@
+.pains {
+  background-color: var(--navy);
+  color: #fff;
+
+  .content-box {
+    &:last-child {
+      padding-top: 70px;
+
+      @include for-size(desktop) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 100px;
+      }
+    }
+  }
+}
+
+.title-icon:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 50px;
+  background-image: url(../images/emoji/pains-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pains-item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &:before {
+    content: '';
+    flex-shrink: 0;
+    width: 70px;
+    height: 54px;
+    margin-right: 30px;
+    background-image: url(../images/icon/pains-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

@@ -1,3 +1,28 @@
+.speakers-label {
+  background-color: var(--accent-cl);
+  color: #fff;
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  &-text {
+    position: relative;
+    padding-left: 94px;
+    font-weight: 700;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-image: url(../images/emoji/rocket.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
 .speakers-list {
   padding-top: 50px;
 }
@@ -6,7 +31,6 @@
   padding-top: 50px;
   padding-bottom: 50px;
   border-top: 1px solid #bdbdbd;
-  letter-spacing: 0.05em;
 
   @include for-size(tablet) {
     display: flex;

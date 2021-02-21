@@ -1,35 +1,97 @@
-.page-header {
-  padding-top: 15px;
-  padding-bottom: 15px;
+.hero-header {
+  min-height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: var(--dark-bg);
+  color: #ffffff;
+
+  @include for-size(tablet) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
   .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
-  .contacts {
-    margin-left: auto;
+  .logo {
+    width: 80px;
   }
 
-  .contacts-list {
-    @media screen and (max-width: 1199px) {
-      display: none;
+  .btn {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.hero-content {
+  @include for-size(desktop) {
+    width: calc(100% / 4 * 3);
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  @include for-size(desktop) {
+    width: calc(100% / 12 * 5);
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+.hero-label {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  color: #04102f;
+  background-color: #fff;
+
+  @include for-size(tablet) {
+    font-size: 50px;
+  }
+
+  &:after {
+    content: 'free';
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(calc(100% + 10px));
+    font-family: Acrom;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #ff6c00;
+
+    @include for-size(tablet) {
+      transform: translateX(calc(100% + 15px));
     }
   }
+}
 
-  .contacts-title {
-    display: none;
+.hero-date {
+  display: block;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4;
 
-    @include for-size(desktop) {
-      display: block;
-    }
+  @include for-size(tablet) {
+    font-size: 20px;
   }
+}
 
-  .btn:not(.btn-accent) {
-    margin-left: 20px;
+.hero-title {
+  margin-bottom: 10px;
+  font-size: 75px;
+  line-height: 1;
 
-    @include for-size(mobile-only) {
-      display: none;
-    }
+  @include for-size(tablet) {
+    font-size: 150px;
   }
 }

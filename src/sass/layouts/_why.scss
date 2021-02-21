@@ -1,0 +1,63 @@
+.why {
+  background-color: var(--dark-bg);
+  color: #ffffff;
+}
+
+.why-list {
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include for-size(desktop) {
+    padding-top: 100px;
+  }
+}
+
+.why-item {
+  position: relative;
+  padding-left: 100px;
+
+  &:not(:last-child) {
+    margin-bottom: 70px;
+  }
+
+  @include for-size(desktop) {
+    width: calc((100% - 30px) / 12 * 5);
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 70px;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 60px;
+    background-image: url(../images/emoji/why-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:nth-child(2)::before {
+    background-image: url(../images/emoji/why-2.png);
+  }
+
+  &:nth-child(3)::before {
+    background-image: url(../images/emoji/why-3.png);
+  }
+
+  &:nth-child(4)::before {
+    background-image: url(../images/emoji/why-4.png);
+  }
+
+  .accent-text {
+    font-weight: 700;
+    font-size: 20px;
+  }
+}

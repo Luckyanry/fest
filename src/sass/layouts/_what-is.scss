@@ -1,0 +1,97 @@
+.what-is-list {
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@include for-size(desktop) {
+  .what-is-content {
+    width: calc((100% - 30px) / 12 * 7);
+  }
+}
+
+.what-is-item {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.33;
+  color: var(--blue);
+
+  @include for-size(tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc((100% - 20px * 2) / 4);
+
+    &:last-child {
+      width: calc((100% - 20px * 2) / 2);
+    }
+  }
+
+  @include for-size(desktop) {
+    width: calc((100% - 30px * 2) / 7 * 2);
+
+    &:last-child {
+      width: calc((100% - 30px * 2) / 7 * 3);
+    }
+  }
+}
+
+.item-summary {
+  font-size: 40px;
+  line-height: 2;
+  flex-shrink: 0;
+
+  @include for-size(mobile-only) {
+    width: 50%;
+    margin-right: 10px;
+    text-align: right;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+
+      background-image: url(../images/emoji/what-1.png);
+      background-repeat: no-repeat;
+      background-position: center;
+
+      .what-is-item:nth-child(2) & {
+        background-image: url(../images/emoji/what-2.png);
+      }
+
+      .what-is-item:nth-child(3) & {
+        background-image: url(../images/emoji/what-3.png);
+      }
+    }
+  }
+
+  @include for-size(tablet) {
+    font-size: 75px;
+
+    &:before {
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+
+      background-image: url(../images/emoji/what-1.png);
+      background-repeat: no-repeat;
+      background-position: center;
+
+      .what-is-item:nth-child(2) & {
+        background-image: url(../images/emoji/what-2.png);
+      }
+
+      .what-is-item:nth-child(3) & {
+        background-image: url(../images/emoji/what-3.png);
+      }
+    }
+  }
+}

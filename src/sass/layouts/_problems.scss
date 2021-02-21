@@ -1,0 +1,26 @@
+.problems {
+  padding-bottom: 0;
+}
+
+.problems .section-title {
+  width: calc((100% - 30px) / 12 * 5);
+}
+
+.problems-bg {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.7) 0, rgba(255, 255, 255, 0.7) 100%),
+    url(../images/pattern.svg);
+}
+
+.problems-item {
+  padding: 60px 20px;
+  color: #fff;
+  background-color: var(--blue);
+  box-shadow: 0px 10px 40px var(--blue);
+  @include for-size(tablet) {
+    --grid-item: 2;
+  }
+
+  @include for-size(desktop) {
+    --grid-item: 3;
+  }
+}

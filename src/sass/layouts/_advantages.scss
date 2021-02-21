@@ -1,0 +1,68 @@
+.advantages-list {
+  padding-top: 50px;
+}
+
+.advantages-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include for-size(desktop) {
+    --grid-item: 2;
+  }
+
+  &:before {
+    content: '';
+    flex-shrink: 0;
+    width: 90px;
+    height: 40px;
+    margin-right: 30px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 50%, 100% 50%;
+    background-image: url(../images/emoji/1.png), url(../images/emoji/1em.png);
+  }
+
+  &:nth-child(2) {
+    @include for-size(desktop) {
+      order: 3;
+    }
+    &::before {
+      background-image: url(../images/emoji/2.png), url(../images/emoji/2em.png);
+    }
+  }
+  &:nth-child(3) {
+    @include for-size(desktop) {
+      order: 5;
+    }
+    &::before {
+      background-image: url(../images/emoji/3.png), url(../images/emoji/3em.png);
+    }
+  }
+  &:nth-child(4) {
+    @include for-size(desktop) {
+      order: 2;
+    }
+
+    &::before {
+      background-image: url(../images/emoji/4.png), url(../images/emoji/4em.png);
+    }
+  }
+  &:nth-child(5) {
+    @include for-size(desktop) {
+      order: 4;
+    }
+
+    &::before {
+      background-image: url(../images/emoji/5.png), url(../images/emoji/rocket.png);
+    }
+  }
+  &:nth-child(6) {
+    @include for-size(desktop) {
+      order: 6;
+    }
+
+    &::before {
+      background-image: url(../images/emoji/6.png), url(../images/emoji/6em.png);
+    }
+  }
+}

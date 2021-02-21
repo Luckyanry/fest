@@ -6,20 +6,32 @@
   font-size: 14px;
   line-height: 1.214;
 
-  @media screen and (max-width: 767px) {
-    text-align: center;
-  }
+  // @media screen and (max-width: 767px) {
+  //   text-align: center;
+  // }
 }
 
 .widget-area {
+  display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
 }
 
 .widget-box {
-  @include for-size(tablet) {
-    --grid-item: 2;
+  @include for-size(mobile-only) {
+    &:first-child {
+      width: 100%;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      width: 50%;
+    }
+
+    &:last-child {
+      width: 100%;
+    }
   }
-  @include for-size(desktop) {
+  @include for-size(tablet) {
     --grid-item: 4;
   }
 }
