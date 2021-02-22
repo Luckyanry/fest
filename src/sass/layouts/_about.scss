@@ -1,0 +1,24 @@
+.about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about-list {
+  @include for-size(tablet) {
+    display: flex;
+  }
+}
+
+.about-item {
+  font-size: 12px;
+  line-height: 2;
+  text-transform: uppercase;
+
+  @include for-size(tablet) {
+    flex-basis: calc(100% / 3);
+  }
+
+  @include for-size(desktop) {
+    flex-basis: 30%;
+  }
+}
