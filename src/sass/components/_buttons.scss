@@ -2,17 +2,31 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 40px;
   border: none;
   font-family: inherit;
+  padding: 13px 14px;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 2.25;
+  font-size: 12px;
+  line-height: 3;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  transition: 0.3s linear;
+  cursor: pointer;
+
+  @include for-size(mobile) {
+    padding: 13px 28px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 16px;
+    line-height: 2.25;
+    padding: 20px 40px;
+  }
+}
+
+.btn-accent {
   color: #ffffff;
   background-color: var(--accent-cl);
-  transition: 0.3s linear;
 
   &:hover,
   &:focus,
@@ -22,6 +36,21 @@
 }
 
 .btn-transparent {
+  font-size: 14px;
   background-color: transparent;
-  color: var(--accent-dark-cl);
+  color: var(--accent-cl);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+    color: var(--accent-dark-cl);
+  }
+}
+
+.btn-icon {
+  display: inline-block;
+  fill: currentColor;
+  margin-left: 14px;
+  margin-bottom: 3px;
 }

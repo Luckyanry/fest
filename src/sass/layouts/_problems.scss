@@ -14,7 +14,7 @@
 .problems-item {
   padding: 60px 20px;
   color: #fff;
-  background-color: var(--blue);
+  background-color: var(--dark-bg);
   box-shadow: 0px 10px 40px var(--blue);
   @include for-size(tablet) {
     --grid-item: 2;
@@ -22,5 +22,86 @@
 
   @include for-size(desktop) {
     --grid-item: 3;
+  }
+}
+
+.dialog-item {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.43;
+  margin-bottom: 15px;
+}
+
+.dialog-item-left {
+  padding-left: 38px;
+
+  .dialog-img {
+    left: 0;
+  }
+}
+
+.dialog-item-right {
+  flex-direction: row-reverse;
+  padding-right: 38px;
+
+  .dialog-img {
+    right: 0;
+  }
+
+  .dialog-reaction {
+    margin-right: 4px;
+  }
+
+  .talk-bubble {
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.24), 0px 2px 4px rgba(0, 0, 0, 0.16), 0px -1px 1px rgba(0, 0, 0, 0.08);
+    border-radius: 24px 0px 24px 24px;
+  }
+}
+
+.dialog-img {
+  position: absolute;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+}
+
+.dialog-reaction {
+  flex-shrink: 0;
+  background: #032068;
+  box-shadow: 0px 10px 40px #032068;
+  border-radius: 24px;
+  margin-left: 4px;
+  padding: 4px 6px;
+
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.talk-bubble {
+  --bubble-color: #1868fb;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.24), 0px 2px 4px rgba(0, 0, 0, 0.16), 0px -1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 0px 24px 24px 24px;
+  background-color: var(--bubble-color);
+  padding: 12px 20px;
+
+  &.red {
+    --bubble-color: #c04840;
+  }
+
+  &.green {
+    --bubble-color: #00bf9d;
+  }
+
+  &.purple {
+    --bubble-color: #8d79c3;
   }
 }

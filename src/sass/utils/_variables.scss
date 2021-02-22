@@ -1,15 +1,16 @@
 :root {
-  --accent-cl: rgba(255, 108, 0, 1);
-  --accent-dark-cl: rgb(236, 100, 3);
-  --main-text-cl: rgb(16, 16, 16);
+  --accent-cl: #ff6c00;
+  --accent-dark-cl: #d14a00;
+  --main-text-cl: #101010;
   --purple: rgba(141, 121, 195, 1);
-  --light-blue: rgba(39, 159, 246, 1);
+  --light-blue: hsl(205, 92%, 56%);
   --blue: #032068;
   --navy: #071a4b;
   --dark-bg: #04102f;
   --dark-bg-text: #798dc3;
-  --footer-bg: rgb(1, 9, 30);
+  --footer-bg: #01091e;
 
   --grid-item: 1;
-  --grid-mr: 30px;
+  --grid-mr-left: 30px;
+  --grid-mr-top: 30px;
 }

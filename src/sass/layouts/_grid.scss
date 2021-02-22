@@ -1,18 +1,18 @@
 .grid {
-  margin-top: calc(var(--grid-mr) * -1);
+  margin-top: calc(var(--grid-mr-top) * -1);
 
   @include for-size(tablet) {
     display: flex;
     flex-wrap: wrap;
-    margin-left: calc(var(--grid-mr) * -1);
+    margin-left: calc(var(--grid-mr-left) * -1);
   }
 }
 
 .grid-item {
-  margin-top: var(--grid-mr);
+  margin-top: var(--grid-mr-top);
 
   @include for-size(tablet) {
-    flex-basis: calc(100% / var(--grid-item) - var(--grid-mr));
-    margin-left: var(--grid-mr);
+    flex-basis: calc(100% / var(--grid-item) - var(--grid-mr-left));
+    margin-left: var(--grid-mr-left);
   }
 }

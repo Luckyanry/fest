@@ -1,14 +1,7 @@
 .hero-header {
   min-height: 100vh;
-  padding-top: 20px;
-  padding-bottom: 20px;
   background-color: var(--dark-bg);
   color: #ffffff;
-
-  @include for-size(tablet) {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 
   .container {
     display: flex;
@@ -19,27 +12,60 @@
   .logo {
     width: 80px;
   }
+}
 
-  .btn {
-    padding-left: 0;
-    padding-right: 0;
+.top-panel {
+  background: var(--dark-bg);
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 90;
+
+  @include for-size(tablet) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .btn-transparent {
+    @include for-size(mobile-only) {
+      display: none;
+    }
+    @include for-size(tablet-only) {
+      margin-left: auto;
+      span {
+        display: none;
+      }
+    }
+    @include for-size(desktop) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
 .hero-content {
-  @include for-size(desktop) {
+  @include for-size(tablet) {
     width: calc(100% / 4 * 3);
     padding-top: 75px;
     padding-bottom: 75px;
   }
+
   @include for-size(desktop) {
     width: calc(100% / 12 * 5);
     padding-top: 70px;
     padding-bottom: 70px;
   }
+  .btn {
+    margin-top: 50px;
+
+    @include for-size(tablet) {
+      display: none;
+    }
+  }
 }
 
 .hero-label {
+  font-family: 'Montserrat', sans-serif;
   position: relative;
   display: inline-block;
   margin-bottom: 20px;

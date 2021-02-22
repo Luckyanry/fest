@@ -14,10 +14,14 @@
 .what-is-item {
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.33;
   color: var(--blue);
+
+  @include for-size(mobile) {
+    font-size: 24px;
+  }
 
   @include for-size(tablet) {
     display: flex;
@@ -40,7 +44,7 @@
 }
 
 .item-summary {
-  font-size: 40px;
+  font-size: 28px;
   line-height: 2;
   flex-shrink: 0;
 
@@ -69,6 +73,10 @@
         background-image: url(../images/emoji/what-3.png);
       }
     }
+  }
+
+  @include for-size(mobile) {
+    font-size: 40px;
   }
 
   @include for-size(tablet) {

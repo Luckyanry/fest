@@ -10,15 +10,32 @@
         <li class="menu-item"><a href="" class="link menu-link">организаторы</a></li>
         <li class="menu-item"><a href="" class="link menu-link">спикеры</a></li>
       </ul>
-      <button class="btn btn-transparent">зарегистрироваться</button>
+      <button class="btn btn-transparent">
+        <span>зарегистрироваться</span>
+        <svg class="btn-icon" width="14" height="18">
+          <use href="./images/sprite.svg#icon-fire"></use>
+        </svg>
+      </button>
+      <button class="hamburger hamburger--spring mmenu-btn" type="button" data-modal-btn>
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
     </div>
   </div>
+  <include src="./partials/mobile-menu.html"></include>
   <div class="container">
     <div class="hero-content">
       <span class="hero-label">[ ONLINE ] </span>
       <span class="hero-date">13_Марта_2021</span>
       <h1 class="title hero-title">[ IT FEST ]</h1>
       <p class="hero-description">/Конференция, которая объединяет будущих разработчиков</p>
+      <button class="btn btn-accent" type="button">
+        <span>Забронировать место</span>
+        <svg class="btn-icon" width="32" height="32">
+          <use href="./images/sprite.svg#icon-telegram"></use>
+        </svg>
+      </button>
     </div>
   </div>
 </header>
