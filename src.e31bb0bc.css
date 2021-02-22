@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 *, ::after, ::before {
   box-sizing: border-box;
@@ -135,6 +136,8 @@ summary {
   --grid-item: 1;
   --grid-mr-left: 30px;
   --grid-mr-top: 30px;
+  --emoji: apple color emoji, segoe ui emoji, notocoloremoji, segoe ui symbol, android emoji, emojisymbols,
+    emojione mozilla;
 }
 
 /*!
@@ -653,11 +656,6 @@ img {
 .hero-content .btn {
   margin-top: 50px;
 }
-@media (min-width: 768px) {
-  .hero-content .btn {
-    display: none;
-  }
-}
 
 .hero-label {
   font-family: "Montserrat", sans-serif;
@@ -720,6 +718,17 @@ img {
   }
 }
 
+.hero-description::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 24px;
+  margin-top: 30px;
+  background-image: url(/youtube.88e43ca5.svg);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
 @media (min-width: 768px) {
   .what-is-list {
     display: flex;
@@ -777,21 +786,25 @@ img {
     text-align: right;
   }
   .item-summary:after {
-    content: "";
     display: inline-block;
     flex-shrink: 0;
     width: 40px;
-    height: 40px;
     margin-left: 10px;
+    font-family: var(--emoji);
+    font-size: 40px;
+  }
+  .what-is-item:nth-child(1) .item-summary:after {
+    content: "";
+    height: 40px;
     background-image: url(/what-1.bfd8716b.png);
     background-repeat: no-repeat;
     background-position: center;
   }
   .what-is-item:nth-child(2) .item-summary:after {
-    background-image: url(/what-2.dc1a4ae9.png);
+    content: "⏰";
   }
   .what-is-item:nth-child(3) .item-summary:after {
-    background-image: url(/what-3.5504b525.png);
+    content: "😺";
   }
 }
 @media (min-width: 480px) {
@@ -809,15 +822,20 @@ img {
     flex-shrink: 0;
     width: 40px;
     height: 40px;
+    font-family: var(--emoji);
+    font-size: 40px;
+    line-height: 1;
+  }
+  .what-is-item:nth-child(1) .item-summary:before {
     background-image: url(/what-1.bfd8716b.png);
     background-repeat: no-repeat;
     background-position: center;
   }
   .what-is-item:nth-child(2) .item-summary:before {
-    background-image: url(/what-2.dc1a4ae9.png);
+    content: "⏰";
   }
   .what-is-item:nth-child(3) .item-summary:before {
-    background-image: url(/what-3.5504b525.png);
+    content: "😺";
   }
 }
 
@@ -827,12 +845,12 @@ img {
 }
 @media (min-width: 768px) {
   .profit .section-title:after {
-    content: "";
+    content: "✌";
     display: block;
     width: 60px;
-    height: 60px;
     margin-top: 50px;
-    background-image: url(/profit-icon.231bca81.png);
+    font-family: var(--emoji);
+    font-size: 60px;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -910,12 +928,13 @@ img {
   margin-bottom: 30px;
 }
 .offer .offer-title-icon:after {
-  content: "";
+  content: "👇";
   display: block;
   width: 60px;
-  height: 60px;
   margin-top: 116px;
   margin-bottom: 50px;
+  font-family: var(--emoji);
+  font-size: 60px;
   background-image: url(/offer-icon.9b4a1bfd.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -955,23 +974,27 @@ img {
   }
 }
 .why-item:before {
-  content: "";
+  content: "💸";
   position: absolute;
   top: 0;
   left: 0;
   width: 70px;
-  height: 60px;
+  font-family: var(--emoji);
+  font-size: 70px;
   background-image: url(/why-1.427fda62.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 .why-item:nth-child(2)::before {
+  content: "💪";
   background-image: url(/why-2.dab48463.png);
 }
 .why-item:nth-child(3)::before {
+  content: "🛋";
   background-image: url(/why-3.c0997f92.png);
 }
 .why-item:nth-child(4)::before {
+  content: "👨‍💻";
   background-image: url(/why-4.03ba2591.png);
 }
 .why-item .accent-text {
@@ -996,14 +1019,12 @@ img {
 }
 
 .title-icon:before {
-  content: "";
+  content: "🤞";
   display: block;
   width: 60px;
-  height: 60px;
+  font-family: var(--emoji);
+  font-size: 60px;
   margin-bottom: 50px;
-  background-image: url(/pains-icon.67334fbc.png);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .pains-item {
@@ -1126,6 +1147,12 @@ img {
   --bubble-color: #8d79c3;
 }
 
+.sticker {
+  position: relative;
+  top: 15px;
+  left: 40px;
+}
+
 .advantages-list {
   padding-top: 50px;
   --grid-mr-top: 40px;
@@ -1148,15 +1175,12 @@ img {
   }
 }
 .advantages-item:before {
-  content: "";
+  content: "1️⃣🤝";
   display: block;
   flex-shrink: 0;
-  width: 90px;
-  height: 40px;
+  font-size: 40px;
+  font-family: var(--emoji);
   margin-bottom: 30px;
-  background-repeat: no-repeat, no-repeat;
-  background-position: 0 50%, 100% 50%;
-  background-image: url(/1.c1564dcd.png), url(/1em.adf5eb9c.png);
 }
 @media (min-width: 768px) {
   .advantages-item:before {
@@ -1170,7 +1194,7 @@ img {
   }
 }
 .advantages-item:nth-child(2)::before {
-  background-image: url(/2.65469337.png), url(/2em.0c856c75.png);
+  content: "2️⃣⚒";
 }
 @media (min-width: 1200px) {
   .advantages-item:nth-child(3) {
@@ -1178,7 +1202,7 @@ img {
   }
 }
 .advantages-item:nth-child(3)::before {
-  background-image: url(/3.4c8569c5.png), url(/3em.5ed06f3e.png);
+  content: "3️⃣🔮";
 }
 @media (min-width: 1200px) {
   .advantages-item:nth-child(4) {
@@ -1186,7 +1210,7 @@ img {
   }
 }
 .advantages-item:nth-child(4)::before {
-  background-image: url(/4.63426397.png), url(/4em.a5401a31.png);
+  content: "4️⃣🙋";
 }
 @media (min-width: 1200px) {
   .advantages-item:nth-child(5) {
@@ -1194,7 +1218,7 @@ img {
   }
 }
 .advantages-item:nth-child(5)::before {
-  background-image: url(/5.554af18d.png), url(/rocket.4aa21986.png);
+  content: "5️⃣🚀";
 }
 @media (min-width: 1200px) {
   .advantages-item:nth-child(6) {
@@ -1202,10 +1226,11 @@ img {
   }
 }
 .advantages-item:nth-child(6)::before {
-  background-image: url(/6.502db5b8.png), url(/6em.8c2c2bcd.png);
+  content: "6️⃣🧙‍♀️";
 }
 
 .sponsors {
+  padding-bottom: 50px;
   background-color: #eef4fa;
 }
 
@@ -1227,6 +1252,33 @@ img {
   color: #fff;
 }
 
+.about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .about-list {
+    display: flex;
+  }
+}
+
+.about-item {
+  font-size: 12px;
+  line-height: 2;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .about-item {
+    flex-basis: calc(100% / 3);
+  }
+}
+@media (min-width: 1200px) {
+  .about-item {
+    flex-basis: 30%;
+  }
+}
+
 .speakers-label {
   background-color: var(--accent-cl);
   color: #fff;
@@ -1243,14 +1295,12 @@ img {
   }
 }
 .speakers-label-text:before {
-  content: "";
+  content: "🚀";
   display: block;
   width: 100%;
-  height: 40px;
+  font-family: var(--emoji);
+  font-size: 40px;
   margin-bottom: 35px;
-  background-image: url(/rocket.4aa21986.png);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 @media (min-width: 768px) {
   .speakers-label-text:before {
@@ -1496,12 +1546,18 @@ img {
 }
 
 .paths-item {
-  --pd: 70px;
+  --pd: 90px;
   --ps-offset: 30px;
   position: relative;
   padding: 30px;
   background-repeat: no-repeat;
-  background-size: 110%;
+  background-size: cover;
+}
+@media (max-width: 767.98px) {
+  .paths-item {
+    font-size: 14px;
+    padding: 30px 20px;
+  }
 }
 .paths-item:not(:last-child) {
   margin-bottom: 40px;

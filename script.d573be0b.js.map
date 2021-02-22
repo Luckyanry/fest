@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/script.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA","file":"script.d573be0b.js","sourceRoot":"../src","sourcesContent":["// var s = skrollr.init({\n//   render: function(data) {\n//     jQuery('.hero-title').text(Math.round(data.curTop))\n//   },\n// })\n"]}
