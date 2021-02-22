@@ -482,7 +482,7 @@ img {
   text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .socials-list {
     display: flex;
     flex-wrap: wrap;
@@ -616,12 +616,12 @@ img {
     padding-bottom: 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .top-panel .btn-transparent {
     display: none;
   }
 }
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199.98px) {
   .top-panel .btn-transparent {
     margin-left: auto;
   }
@@ -770,7 +770,7 @@ img {
   line-height: 2;
   flex-shrink: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .item-summary {
     width: 50%;
     margin-right: 10px;
@@ -845,7 +845,7 @@ img {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .profit-item {
     display: flex;
   }
@@ -1277,7 +1277,7 @@ img {
     align-items: flex-start;
   }
 }
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199.98px) {
   .speakers-item {
     flex-wrap: wrap;
   }
@@ -1337,7 +1337,7 @@ img {
 .speakers-content {
   flex-grow: 1;
 }
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199.98px) {
   .speakers-content {
     order: 3;
     width: 100%;
@@ -1390,7 +1390,7 @@ img {
   color: #000000;
   order: 2;
 }
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199.98px) {
   .speakers-time {
     padding-top: 20px;
   }
@@ -1590,7 +1590,7 @@ img {
     width: calc(100% / 6);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .steps-item:not(:last-child),
 .steps-item .steps-content-left {
     margin-bottom: 130px;
@@ -1630,7 +1630,7 @@ img {
     width: 100%;
   }
 }
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199.98px) {
   .steps-item:first-child {
     margin-bottom: 120px;
   }
@@ -1743,7 +1743,7 @@ img {
   align-items: flex-start;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .widget-box:first-child {
     width: 100%;
   }
