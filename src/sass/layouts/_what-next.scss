@@ -25,12 +25,17 @@
 }
 
 .paths-item {
-  --pd: 70px;
+  --pd: 90px;
   --ps-offset: 30px;
   position: relative;
   padding: 30px;
   background-repeat: no-repeat;
-  background-size: 110%;
+  background-size: cover;
+
+  @include for-size(mobile-only) {
+    font-size: 14px;
+    padding: 30px 20px;
+  }
 
   &:not(:last-child) {
     margin-bottom: 40px;

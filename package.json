@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://jclad.github.io/ajs",
+  "homepage": "https://jclad.github.io/fest",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html",
-    "predeploy": "npm run build -- --public-url /ajs/",
+    "predeploy": "npm run build -- --public-url /fest/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
