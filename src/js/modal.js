@@ -1,13 +1,20 @@
 ;(() => {
-  const openMenuBtn = document.querySelector('[data-modal-btn]')
-  const mobileMenu = document.querySelector('[data-menu]')
+  const openModalBtn = document.querySelectorAll('.btn-modal')
+  const modal = document.querySelector('[data-modal]')
+  const closeModalBtn = document.querySelector('[data-modal-close]')
+  const body = document.querySelector('.body')
 
-  openMenuBtn.addEventListener('click', () => {
-    const expanded = openMenuBtn.getAttribute('aria-expanded') === 'true' || false
-
-    openMenuBtn.classList.toggle('is-active')
-    openMenuBtn.setAttribute('aria-expanded', !expanded)
-
-    mobileMenu.classList.toggle('is-open')
+  openModalBtn.forEach(function(btn) {
+    btn.addEventListener('click', () => {
+      console.log('open modal')
+      toggleModal()
+    })
   })
+
+  closeModalBtn.addEventListener('click', toggleModal)
+
+  function toggleModal() {
+    modal.classList.toggle('is-hidden')
+    body.classList.toggle('scroll-hidden')
+  }
 })()

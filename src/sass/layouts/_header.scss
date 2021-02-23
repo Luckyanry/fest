@@ -1,16 +1,17 @@
 .hero-header {
-  min-height: 100vh;
+  // min-height: 100vh;
   background-color: var(--dark-bg);
   color: #ffffff;
-
+  padding-bottom: 300px;
   @include for-size(desktop) {
-    padding-bottom: 100px;
+    padding-bottom: 300px;
   }
 
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
 
   .logo {
@@ -51,23 +52,32 @@
 }
 
 .hero-content {
+  position: relative;
+
   @include for-size(tablet) {
     width: calc(100% / 4 * 3);
     padding-top: 75px;
-    padding-bottom: 75px;
   }
 
   @include for-size(desktop) {
     width: calc(100% / 12 * 5);
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 140px;
   }
   .btn {
     margin-top: 50px;
+  }
+}
 
-    @include for-size(desktop) {
-      display: none;
-    }
+.hero-video {
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+  transform: translateY(100%);
+  max-width: 100%;
+  height: auto;
+  @include for-size(tablet-only) {
+    left: 50%;
+    transform: translate(-50%, 100%);
   }
 }
 

@@ -47,7 +47,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
   </head>
-  <body>
+  <body class="body">
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -75,12 +75,24 @@
       <include src="./partials/book.html"></include>
     </main>
     <include src="./partials/footer.html"></include>
-    <picture>
-      <source srcset="" type="image/webp" />
-    </picture>
+    <include src="./partials/modal.html"></include>
+
     <script src="./index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+    <!-- leeloo init code -->
+    <script>
+      window.LEELOO = function() {
+        window.LEELOO_INIT = { id: '5d0cb9cdaad9f4000e4b8e07' }
+        var js = document.createElement('script')
+        js.src = 'https://app.leeloo.ai/init.js'
+        js.async = true
+        document.getElementsByTagName('head')[0].appendChild(js)
+      }
+      LEELOO()
+    </script>
+    <!-- end leeloo init code -->
   </body>
 </html>
