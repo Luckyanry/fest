@@ -39,7 +39,7 @@ new App()
 /* Buttom animation */
 $('.js-btn--fly').click(function () {
   $(this).toggleClass('clicked')
-  $('.js-btn--fly .btn-text').text(function (i, text) {
-    return text === 'Забронировано' ? 'Забронировать место' : 'Забронировано'
-  })
+  // $('.js-btn--fly .btn-text').text(function (i, text) {
+  //   return text === 'Забронировать место' ? 'Забронировать место' : 'Забронировать место'
+  // })
 })
