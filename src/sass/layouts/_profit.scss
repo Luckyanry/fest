@@ -4,16 +4,16 @@
 
   @include for-size(tablet) {
     .section-title:after {
-      content: '✌';
+      content: '';
       display: block;
       width: 60px;
-      // height: 60px;
+      height: 60px;
       margin-top: 50px;
-      font-family: var(--emoji);
-      font-size: 60px;
-      // background-image: url(../images/emoji/profit-icon.png);
-      // background-repeat: no-repeat;
-      // background-position: center;
+
+      background-image: url(../images/emoji/profit-icon.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
     }
   }
 }

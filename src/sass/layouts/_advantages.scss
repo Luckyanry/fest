@@ -18,17 +18,16 @@
   }
 
   &:before {
-    content: '1️⃣🤝';
+    content: '';
     display: block;
     flex-shrink: 0;
-    // width: 90px;
-    // height: 40px;
-    font-size: 40px;
-    font-family: var(--emoji);
+    width: 90px;
+    height: 40px;
     margin-bottom: 30px;
-    // background-repeat: no-repeat, no-repeat;
-    // background-position: 0 50%, 100% 50%;
-    // background-image: url(../images/emoji/1.png), url(../images/emoji/1em.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 50%, 100% 50%;
+    background-image: url(../images/emoji/1.png), url(../images/emoji/1em.png);
+    background-size: contain;
 
     @include for-size(tablet) {
       margin-right: 30px;
@@ -41,8 +40,7 @@
       order: 3;
     }
     &::before {
-      content: '2️⃣⚒';
-      // background-image: url(../images/emoji/2.png), url(../images/emoji/2em.png);
+      background-image: url(../images/emoji/2.png), url(../images/emoji/2em.png);
     }
   }
   &:nth-child(3) {
@@ -50,8 +48,7 @@
       order: 5;
     }
     &::before {
-      content: '3️⃣🔮';
-      // background-image: url(../images/emoji/3.png), url(../images/emoji/3em.png);
+      background-image: url(../images/emoji/3.png), url(../images/emoji/3em.png);
     }
   }
   &:nth-child(4) {
@@ -60,8 +57,7 @@
     }
 
     &::before {
-      content: '4️⃣🙋';
-      // background-image: url(../images/emoji/4.png), url(../images/emoji/4em.png);
+      background-image: url(../images/emoji/4.png), url(../images/emoji/4em.png);
     }
   }
   &:nth-child(5) {
@@ -70,8 +66,7 @@
     }
 
     &::before {
-      content: '5️⃣🚀';
-      // background-image: url(../images/emoji/5.png), url(../images/emoji/rocket.png);
+      background-image: url(../images/emoji/5.png), url(../images/emoji/rocket.png);
     }
   }
   &:nth-child(6) {
@@ -80,8 +75,7 @@
     }
 
     &::before {
-      content: '6️⃣🧙‍♀️';
-      // background-image: url(../images/emoji/6.png), url(../images/emoji/6em.png);
+      background-image: url(../images/emoji/6.png), url(../images/emoji/6em.png);
     }
   }
 }

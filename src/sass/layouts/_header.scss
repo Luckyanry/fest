@@ -20,7 +20,10 @@
 
 .top-panel {
   background: var(--dark-bg);
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   padding-top: 20px;
   padding-bottom: 20px;
   z-index: 90;
