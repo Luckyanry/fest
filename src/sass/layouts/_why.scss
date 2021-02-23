@@ -45,24 +45,24 @@
     // height: 60px;
     font-family: var(--emoji);
     font-size: 70px;
-    background-image: url(../images/emoji/why-1.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    // background-image: url(../images/emoji/why-1.png);
+    // background-repeat: no-repeat;
+    // background-position: center;
   }
 
   &:nth-child(2)::before {
     content: '💪';
-    background-image: url(../images/emoji/why-2.png);
+    // background-image: url(../images/emoji/why-2.png);
   }
 
   &:nth-child(3)::before {
     content: '🛋';
-    background-image: url(../images/emoji/why-3.png);
+    // background-image: url(../images/emoji/why-3.png);
   }
 
   &:nth-child(4)::before {
     content: '👨‍💻';
-    background-image: url(../images/emoji/why-4.png);
+    // background-image: url(../images/emoji/why-4.png);
   }
 
   .accent-text {
