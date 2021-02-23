@@ -120,29 +120,26 @@
     text-align: right;
 
     &:after {
+      content: '';
       display: inline-block;
       flex-shrink: 0;
       width: 40px;
+      height: 40px;
       margin-left: 10px;
-      font-family: var(--emoji);
-      font-size: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
 
       .what-is-item:nth-child(1) & {
-        content: '';
-        height: 40px;
         background-image: url(../images/emoji/what-1.png);
-        background-repeat: no-repeat;
-        background-position: center;
       }
 
       .what-is-item:nth-child(2) & {
-        content: '⏰';
-        // background-image: url(../images/emoji/what-2.png);
+        background-image: url(../images/emoji/what-2.png);
       }
 
       .what-is-item:nth-child(3) & {
-        content: '😺';
-        // background-image: url(../images/emoji/what-3.png);
+        background-image: url(../images/emoji/what-3.png);
       }
     }
   }
@@ -160,25 +157,22 @@
       flex-shrink: 0;
       width: 40px;
       height: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
 
-      font-family: var(--emoji);
-      font-size: 40px;
       line-height: 1;
 
       .what-is-item:nth-child(1) & {
         background-image: url(../images/emoji/what-1.png);
-        background-repeat: no-repeat;
-        background-position: center;
       }
 
       .what-is-item:nth-child(2) & {
-        content: '⏰';
-        // background-image: url(../images/emoji/what-2.png);
+        background-image: url(../images/emoji/what-2.png);
       }
 
       .what-is-item:nth-child(3) & {
-        content: '😺';
-        // background-image: url(../images/emoji/what-3.png);
+        background-image: url(../images/emoji/what-3.png);
       }
     }
   }

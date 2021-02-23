@@ -34,6 +34,18 @@
   }
 }
 
+@include for-size(mobile-only) {
+  .sponsors-img-wrap {
+    transform: translateY(50px);
+  }
+}
+
+@include for-size(tablet-only) {
+  .sponsors-img {
+    margin: 0 auto;
+  }
+}
+
 .sponsors-item {
   &:not(:last-child) {
     margin-bottom: 30px;

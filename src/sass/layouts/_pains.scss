@@ -17,16 +17,15 @@
 }
 
 .title-icon:before {
-  content: '🤞';
+  content: '';
   display: block;
   width: 60px;
-  // height: 60px;
-  font-family: var(--emoji);
-  font-size: 60px;
+  height: 60px;
   margin-bottom: 50px;
-  // background-image: url(../images/emoji/pains-icon.png);
-  // background-repeat: no-repeat;
-  // background-position: center;
+  background-image: url(../images/emoji/pains-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .pains-item {
@@ -46,5 +45,6 @@
     background-image: url(../images/icon/pains-icon.svg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
   }
 }
