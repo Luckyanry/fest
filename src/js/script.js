@@ -55,7 +55,7 @@ counters.forEach(counter => {
     const inc = +counter.innerText
 
     if (inc < target) {
-      counter.innerText = inc + 10
+      counter.innerText = inc + 50
       setTimeout(updateCounter, 1)
     } else {
       counter.innerText = target
