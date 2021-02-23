@@ -597,6 +597,11 @@ img {
   background-color: var(--dark-bg);
   color: #ffffff;
 }
+@media (min-width: 1200px) {
+  .hero-header {
+    padding-bottom: 100px;
+  }
+}
 .hero-header .container {
   display: flex;
   align-items: center;
@@ -655,6 +660,11 @@ img {
 }
 .hero-content .btn {
   margin-top: 50px;
+}
+@media (min-width: 1200px) {
+  .hero-content .btn {
+    display: none;
+  }
 }
 
 .hero-label {
@@ -916,6 +926,10 @@ img {
   background-image: url(/profit-4.468e0533.svg);
 }
 
+.offer {
+  background-image: linear-gradient(to top, var(--dark-bg) 0, var(--dark-bg) 150px, white 150px, white 100%);
+  padding-bottom: 0;
+}
 .offer .content-box:first-child {
   margin-bottom: 100px;
 }
@@ -939,10 +953,18 @@ img {
   background-repeat: no-repeat;
   background-position: center;
 }
+.offer .btn {
+  margin-bottom: 100px;
+}
 
 .why {
   background-color: var(--dark-bg);
   color: #ffffff;
+}
+@media (min-width: 1200px) {
+  .why {
+    padding-top: 0;
+  }
 }
 
 .why-list {
@@ -1230,8 +1252,27 @@ img {
 }
 
 .sponsors {
+  position: relative;
   padding-bottom: 50px;
-  background-color: #eef4fa;
+  background-image: linear-gradient(to top, white 0, white 140px, #eef4fa 140px, #eef4fa 100%);
+}
+@media (min-width: 1200px) {
+  .sponsors {
+    background-image: linear-gradient(to top, white 0, white 75px, #eef4fa 75px, #eef4fa 100%);
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .sponsors .content-box:first-child {
+    margin-bottom: 70px;
+  }
+}
+@media (min-width: 1200px) {
+  .sponsors {
+    padding-bottom: 50px;
+  }
+}
+.sponsors .container {
+  position: relative;
 }
 
 .sponsors-item:not(:last-child) {
@@ -1239,6 +1280,10 @@ img {
 }
 .sponsors-item > p:not(:last-child) {
   margin-bottom: 30px;
+}
+
+.sponsors-img {
+  filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.3));
 }
 
 .title-dark {
@@ -1253,8 +1298,8 @@ img {
 }
 
 .about {
-  padding-top: 50px;
   padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 @media (min-width: 768px) {
@@ -1270,12 +1315,26 @@ img {
 }
 @media (min-width: 768px) {
   .about-item {
+    display: flex;
+    align-items: flex-end;
     flex-basis: calc(100% / 3);
   }
 }
 @media (min-width: 1200px) {
   .about-item {
-    flex-basis: 30%;
+    flex-basis: calc((100% - 30px * 2) / 12 * 3);
+  }
+  .about-item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.about-img {
+  flex-shrink: 0;
+}
+@media (min-width: 1200px) {
+  .about-img {
+    width: calc(100% / 3 * 2);
   }
 }
 
