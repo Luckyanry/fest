@@ -7,7 +7,7 @@ export default new (class {
     this.renderer.setSize(window.innerWidth, window.innerHeight)
     this.renderer.setClearColor(0x04102f, 1)
 
-    this.camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000)
+    this.camera = new THREE.PerspectiveCamera(85, window.innerWidth / window.innerHeight, 1, 1000)
 
     this.camera.position.z = 1
     this.scene = new THREE.Scene()
@@ -45,7 +45,6 @@ export default new (class {
     const canvas = this.renderer.domElement
     const container = document.querySelector('#webgl')
     container.appendChild(canvas)
-    console.log(canvas)
   }
 
   resize() {

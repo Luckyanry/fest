@@ -119,8 +119,8 @@ img {
 .kinetic-content {
   display: flex;
   flex-direction: column;
-  // width: 360px;
-  // height: calc(100% - 13rem);
+  width: 100vw;
+  // height: calc(100vh - 13rem);
   // height: 352px;
   position: relative;
   justify-content: flex-start;
@@ -130,9 +130,12 @@ img {
 canvas {
   // position: absolute;
   // top: 0;
-  // left: 0;
+  // right: 0;
   display: block;
-  width: 360px;
-  height: 352px;
-  margin: 0 auto;
+  width: 320px;
+  height: 360px;
+  // margin: auto 0;
+  // z-index: 0;
 }
+
+#webgl {}
