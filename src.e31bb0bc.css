@@ -282,6 +282,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.05em;
   color: var(--main-text-cl);
+  scroll-behavior: smooth;
 }
 
 address {
@@ -532,6 +533,7 @@ img {
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  overflow-y: scroll;
   padding: 100px 50px 50px;
   background-color: var(--navy);
   z-index: 80;
@@ -542,6 +544,7 @@ img {
 }
 .mobile-menu.is-open {
   visibility: visible;
+  pointer-events: all;
   opacity: 1;
   transition: transform 0.5s ease-in-out, opacity 0.3s linear;
 }
@@ -552,10 +555,6 @@ img {
 }
 .mobile-menu .menu {
   display: block;
-}
-
-.scroll {
-  overflow: auto;
 }
 
 .mmenu-btn {
@@ -706,6 +705,7 @@ img {
 
 .hero-content {
   position: relative;
+  z-index: 2;
 }
 @media (min-width: 768px) {
   .hero-content {
