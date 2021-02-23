@@ -108,19 +108,7 @@
     }
 
     svg {
-      top: -80px;
-      right: -1000px;
-
       animation: flyaway 1.3s linear;
-
-      @include for-size(tablet) {
-        top: -80px;
-        right: -1000px;
-      }
-    }
-
-    .btn-text {
-      margin: 0;
     }
   }
 }
@@ -161,9 +149,9 @@
 }
 
 @keyframes bounce-in {
-  0% { padding-right: 20px; }
-  // 50% { padding-right: 10px; }
-  // 75% { padding-left: 10px; }
+  0% { padding-left: 0; }
+  40% { padding-left: 45px; }
+  80% { padding-right: 20px; }
   100% { padding-right: 0; }
 }
 
