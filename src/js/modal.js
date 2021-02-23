@@ -6,8 +6,9 @@
 
   openModalBtn.forEach(function(btn) {
     btn.addEventListener('click', () => {
-      console.log('open modal')
-      toggleModal()
+      setTimeout(() => {
+        toggleModal()
+      }, 1000)
     })
   })
 
