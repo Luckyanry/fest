@@ -1,6 +1,37 @@
 .sponsors {
+  position: relative;
   padding-bottom: 50px;
-  background-color: rgba(238, 244, 250, 1);
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0,
+    rgba(255, 255, 255, 1) 140px,
+    rgba(238, 244, 250, 1) 140px,
+    rgba(238, 244, 250, 1) 100%
+  );
+
+  @include for-size(desktop) {
+    background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1) 0,
+      rgba(255, 255, 255, 1) 75px,
+      rgba(238, 244, 250, 1) 75px,
+      rgba(238, 244, 250, 1) 100%
+    );
+  }
+
+  .content-box:first-child {
+    @include for-size(tablet-only) {
+      margin-bottom: 70px;
+    }
+  }
+
+  @include for-size(desktop) {
+    padding-bottom: 50px;
+  }
+
+  .container {
+    position: relative;
+  }
 }
 
 .sponsors-item {
@@ -11,6 +42,10 @@
   & > p:not(:last-child) {
     margin-bottom: 30px;
   }
+}
+
+.sponsors-img {
+  filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.3));
 }
 
 .title-dark {

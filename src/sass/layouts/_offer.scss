@@ -1,4 +1,13 @@
 .offer {
+  background-image: linear-gradient(
+    to top,
+    var(--dark-bg) 0,
+    var(--dark-bg) 150px,
+    rgba(255, 255, 255, 1) 150px,
+    rgba(255, 255, 255, 1) 100%
+  );
+  padding-bottom: 0;
+
   .content-box {
     &:first-child {
       margin-bottom: 100px;
@@ -25,5 +34,9 @@
     background-image: url(../images/emoji/offer-icon.png);
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  .btn {
+    margin-bottom: 100px;
   }
 }

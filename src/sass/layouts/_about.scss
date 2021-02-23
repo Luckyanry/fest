@@ -1,6 +1,6 @@
 .about {
-  padding-top: 50px;
   padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .about-list {
@@ -15,10 +15,23 @@
   text-transform: uppercase;
 
   @include for-size(tablet) {
+    display: flex;
+    align-items: flex-end;
     flex-basis: calc(100% / 3);
   }
 
   @include for-size(desktop) {
-    flex-basis: 30%;
+    flex-basis: calc((100% - 30px * 2) / 12 * 3);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.about-img {
+  flex-shrink: 0;
+  @include for-size(desktop) {
+    width: calc(100% / 3 * 2);
   }
 }

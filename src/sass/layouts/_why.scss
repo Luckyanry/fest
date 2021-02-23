@@ -1,6 +1,10 @@
 .why {
   background-color: var(--dark-bg);
   color: #ffffff;
+
+  @include for-size(desktop) {
+    padding-top: 0;
+  }
 }
 
 .why-list {
