@@ -184,16 +184,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./../fonts/Acrom/Acrom-Light.woff":[["Acrom-Light.68ac2d43.woff","fonts/Acrom/Acrom-Light.woff"],"fonts/Acrom/Acrom-Light.woff"],"./../fonts/Acrom/Acrom-Light.woff2":[["Acrom-Light.494b6d45.woff2","fonts/Acrom/Acrom-Light.woff2"],"fonts/Acrom/Acrom-Light.woff2"],"./../fonts/Acrom/Acrom-Regular.woff":[["Acrom-Regular.96326574.woff","fonts/Acrom/Acrom-Regular.woff"],"fonts/Acrom/Acrom-Regular.woff"],"./../fonts/Acrom/Acrom-Regular.woff2":[["Acrom-Regular.c8780340.woff2","fonts/Acrom/Acrom-Regular.woff2"],"fonts/Acrom/Acrom-Regular.woff2"],"./../fonts/Acrom/Acrom-Medium.woff":[["Acrom-Medium.333c9898.woff","fonts/Acrom/Acrom-Medium.woff"],"fonts/Acrom/Acrom-Medium.woff"],"./../fonts/Acrom/Acrom-Bold.woff":[["Acrom-Bold.3700b40e.woff","fonts/Acrom/Acrom-Bold.woff"],"fonts/Acrom/Acrom-Bold.woff"],"./../fonts/Acrom/Acrom-Bold.woff2":[["Acrom-Bold.d618a077.woff2","fonts/Acrom/Acrom-Bold.woff2"],"fonts/Acrom/Acrom-Bold.woff2"],"./../fonts/Acrom/Acrom-ExtraBold.woff":[["Acrom-ExtraBold.5a836c4e.woff","fonts/Acrom/Acrom-ExtraBold.woff"],"fonts/Acrom/Acrom-ExtraBold.woff"],"./../fonts/Acrom/Acrom-ExtraBold.woff2":[["Acrom-ExtraBold.ff500640.woff2","fonts/Acrom/Acrom-ExtraBold.woff2"],"fonts/Acrom/Acrom-ExtraBold.woff2"],"./../images/icon/youtube.svg":[["youtube.88e43ca5.svg","images/icon/youtube.svg"],"images/icon/youtube.svg"],"./../images/emoji/what-1.png":[["what-1.bfd8716b.png","images/emoji/what-1.png"],"images/emoji/what-1.png"],"./../images/icon/profit-1.svg":[["profit-1.f51f4d52.svg","images/icon/profit-1.svg"],"images/icon/profit-1.svg"],"./../images/icon/profit-2.svg":[["profit-2.db7d3fae.svg","images/icon/profit-2.svg"],"images/icon/profit-2.svg"],"./../images/icon/profit-3.svg":[["profit-3.f2385c8e.svg","images/icon/profit-3.svg"],"images/icon/profit-3.svg"],"./../images/icon/profit-4.svg":[["profit-4.468e0533.svg","images/icon/profit-4.svg"],"images/icon/profit-4.svg"],"./../images/icon/pains-icon.svg":[["pains-icon.c2e21532.svg","images/icon/pains-icon.svg"],"images/icon/pains-icon.svg"],"./../images/pattern.svg":[["pattern.8f7299fd.svg","images/pattern.svg"],"images/pattern.svg"],"./../images/lable-tech.svg":[["lable-tech.74774408.svg","images/lable-tech.svg"],"images/lable-tech.svg"],"./../images/lable-soft.svg":[["lable-soft.08a5d2db.svg","images/lable-soft.svg"],"images/lable-soft.svg"],"./../images/lable-hr.svg":[["lable-hr.42478661.svg","images/lable-hr.svg"],"images/lable-hr.svg"],"./../images/path-white-bg.svg":[["path-white-bg.94d223dc.svg","images/path-white-bg.svg"],"images/path-white-bg.svg"],"./../images/path-orange-bg.svg":[["path-orange-bg.c70ad6e6.svg","images/path-orange-bg.svg"],"images/path-orange-bg.svg"],"./../images/icon/arrow.svg":[["arrow.9a5119e9.svg","images/icon/arrow.svg"],"images/icon/arrow.svg"],"./../images/icon/arrow-dots.svg":[["arrow-dots.f59c6f2d.svg","images/icon/arrow-dots.svg"],"images/icon/arrow-dots.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +388,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/index.js.map
