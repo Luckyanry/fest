@@ -82,6 +82,21 @@
     <script src="./js/script.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
+    <script>
+      const smoothAnchors = document.querySelectorAll('.menu-link')
+
+      for (let anchor of smoothAnchors) {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault()
+          const anchorID = anchor.getAttribute('href')
+
+          document.querySelector(anchorID).scrollIntoView({
+            top: 50,
+            behavior: 'smooth',
+          })
+        })
+      }
+    </script>
     <!-- leeloo init code -->
     <script>
       window.LEELOO = function() {
@@ -93,6 +108,10 @@
       }
       LEELOO()
     </script>
+
     <!-- end leeloo init code -->
+    <script>
+      window.LEELOO_LEADGENTOOLS = (window.LEELOO_LEADGENTOOLS || []).concat('kckhp2')
+    </script>
   </body>
 </html>

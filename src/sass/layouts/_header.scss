@@ -53,6 +53,7 @@
 
 .hero-content {
   position: relative;
+  z-index: 2;
 
   @include for-size(tablet) {
     width: calc(100% / 4 * 3);
