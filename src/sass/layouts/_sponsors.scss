@@ -34,6 +34,27 @@
   }
 }
 
+.sponsors-img-wrap {
+  position: relative;
+
+  .round-parallax {
+    bottom: 45px;
+    left: 110px;
+
+    display: block;
+    width: 145px;
+  
+    @include for-size(tablet) {
+      left: 185px;
+      width: 258px;
+    }
+  
+    @include for-size(desktop) {
+      left: 125px;
+    }
+  }
+}
+
 @include for-size(mobile-only) {
   .sponsors-img-wrap {
     transform: translateY(50px);
@@ -53,6 +74,10 @@
 
   & > p:not(:last-child) {
     margin-bottom: 30px;
+  }
+
+  .sponsors-title-icon {
+    margin-left: 5px;
   }
 }
 

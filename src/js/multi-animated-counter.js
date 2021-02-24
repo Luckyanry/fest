@@ -8,14 +8,12 @@ $(function() {
   //init if it becomes visible by scrolling
   $(window).on('scroll', function() {
     getVisibilityStatus()
-    console.log('scroll')
   })
 
   //init if it's visible by page loading
   getVisibilityStatus()
 
   function getVisibilityStatus() {
-    console.log('status')
     elValFromTop = []
     var windowHeight = $(window).height(),
       windowScrollValFromTop = $(this).scrollTop()
