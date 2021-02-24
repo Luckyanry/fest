@@ -38,11 +38,18 @@
   position: relative;
 
   .round-parallax {
-    bottom: 45px;
-    left: 110px;
+    bottom: 0px;
+    left: 46px;
 
     display: block;
     width: 145px;
+
+    @include for-size(mobile) {
+      bottom: 30px;
+      left: 100px;
+      
+      width: 200px;
+    }
   
     @include for-size(tablet) {
       left: 185px;
