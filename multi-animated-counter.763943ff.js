@@ -127,13 +127,12 @@ $(function () {
   //init if it becomes visible by scrolling
 
   $(window).on('scroll', function () {
-    getVisibilityStatus(); // console.log('scroll')
+    getVisibilityStatus();
   }); //init if it's visible by page loading
 
   getVisibilityStatus();
 
   function getVisibilityStatus() {
-    // console.log('status')
     elValFromTop = [];
     var windowHeight = $(window).height(),
         windowScrollValFromTop = $(this).scrollTop();
@@ -219,7 +218,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49790" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60939" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
