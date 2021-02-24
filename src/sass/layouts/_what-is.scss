@@ -9,7 +9,7 @@
 
   @include for-size(tablet) {
     padding-top: 244px;
-    
+
     background-image: linear-gradient(
       to top,
       var(--dark-bg) 0,
@@ -31,7 +31,7 @@
     );
 
     .container {
-      flex-direction: row-reverse;
+      flex-direction: row-reverse; 
     }
   }
 }
@@ -135,11 +135,11 @@
       background-position: center;
       background-size: contain;
 
-      .what-is-item:nth-child(1) & {
+      .what-is-item:nth-child(2) & {
         background-image: url(../images/emoji/what-1.png);
       }
 
-      .what-is-item:nth-child(2) & {
+      .what-is-item:nth-child(1) & {
         background-image: url(../images/emoji/what-2.png);
       }
 
@@ -168,11 +168,11 @@
 
       line-height: 1;
 
-      .what-is-item:nth-child(1) & {
+      .what-is-item:nth-child(2) & {
         background-image: url(../images/emoji/what-1.png);
       }
 
-      .what-is-item:nth-child(2) & {
+      .what-is-item:nth-child(1) & {
         background-image: url(../images/emoji/what-2.png);
       }
 
