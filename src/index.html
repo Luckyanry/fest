@@ -83,22 +83,8 @@
     <script src="./js/script.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
-    <script src="./js/counter.js"></script>
-    <script>
-      const smoothAnchors = document.querySelectorAll('.menu-link')
+    <!-- <script src="./js/counter.js"></script> -->
 
-      for (let anchor of smoothAnchors) {
-        anchor.addEventListener('click', function(e) {
-          e.preventDefault()
-          const anchorID = anchor.getAttribute('href')
-
-          document.querySelector(anchorID).scrollIntoView({
-            top: 50,
-            behavior: 'smooth',
-          })
-        })
-      }
-    </script>
     <!-- leeloo init code -->
     <script>
       window.LEELOO = function() {

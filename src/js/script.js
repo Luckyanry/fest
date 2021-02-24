@@ -37,9 +37,22 @@ class App {
 new App()
 
 /* Buttom animation */
-$('.js-btn--fly').click(function () {
+$('.js-btn--fly').click(function() {
   $(this).toggleClass('clicked')
-  // $('.js-btn--fly .btn-text').text(function (i, text) {
-  //   return text === 'Забронировать место' ? 'Забронировать место' : 'Забронировать место'
-  // })
 })
+
+/*  Smooth Scroll */
+
+const smoothAnchors = document.querySelectorAll('.menu-link')
+
+for (let anchor of smoothAnchors) {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault()
+    const anchorID = anchor.getAttribute('href')
+
+    document.querySelector(anchorID).scrollIntoView({
+      top: 50,
+      behavior: 'smooth',
+    })
+  })
+}
