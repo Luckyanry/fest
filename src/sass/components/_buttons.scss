@@ -96,7 +96,7 @@
     color: #ffffff;
     line-height: 28px;
     background-color: #d14a00;
-    
+
     @include for-size(mobile) {
       animation: bounce-in 0.3s;
       line-height: 50px;

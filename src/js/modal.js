@@ -16,6 +16,6 @@
 
   function toggleModal() {
     modal.classList.toggle('is-hidden')
-    body.classList.toggle('scroll-hidden')
+    // body.classList.toggle('scroll-hidden')
   }
 })()
