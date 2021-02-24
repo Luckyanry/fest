@@ -20,6 +20,8 @@
   }
 
   @include for-size(desktop) {
+    padding-top: 50px;
+
     background-image: linear-gradient(
       to top,
       var(--dark-bg) 0,

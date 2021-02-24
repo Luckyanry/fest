@@ -72,11 +72,7 @@
   }
 
   .btn-text {
-    margin-right: 40px;
-
-    @include for-size(mobile) {
-      margin-right: 45px;
-    }
+    margin-right: 38px;
   }
 
   svg {
@@ -99,11 +95,7 @@
   &.clicked {
     color: #ffffff;
     line-height: 28px;
-
     background-color: #d14a00;
-    border: 2px solid #d14a00;
-
-    // cursor: default;
     
     @include for-size(mobile) {
       animation: bounce-in 0.3s;

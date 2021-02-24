@@ -3,6 +3,10 @@
   color: #ffffff;
   padding-bottom: 360px;
 
+  @include for-size(tablet) {
+    padding-bottom: 420px;
+  }
+
   @include for-size(desktop) {
     padding-bottom: 300px;
   }

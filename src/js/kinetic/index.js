@@ -12,7 +12,7 @@ export default new (class {
 
     console.log(elWidth, elHeight)
 
-    this.camera = new THREE.PerspectiveCamera(85, elWidth / elHeight, 1, 5000)
+    this.camera = new THREE.PerspectiveCamera(72, elWidth / elHeight, 1, 1000)
 
     this.camera.position.z = 1
     this.scene = new THREE.Scene()
