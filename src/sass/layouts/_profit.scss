@@ -2,6 +2,16 @@
   background-color: var(--dark-bg);
   color: #ffffff;
 
+  .container {
+    position: relative;
+  }
+
+  .round-parallax {
+    top: -50px;
+    right: 0;
+    transform: translateY(-100%);
+  }
+
   @include for-size(tablet) {
     .section-title:after {
       content: '';
