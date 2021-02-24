@@ -117,74 +117,82 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"js/multi-animated-counter.js":[function(require,module,exports) {
+$(function () {
+  var visibilityIds = ['#counters_1', '#counters_2', '#counters_3', '#info']; //must be an array, could have only one element
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+  var counterClass = '.counter';
+  var defaultSpeed = 3000; //default value
+  // END CONFIG
+  //init if it becomes visible by scrolling
 
-  return bundleURL;
-}
+  $(window).on('scroll', function () {
+    getVisibilityStatus();
+    console.log('scroll');
+  }); //init if it's visible by page loading
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+  getVisibilityStatus();
 
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
+  function getVisibilityStatus() {
+    console.log('status');
+    elValFromTop = [];
+    var windowHeight = $(window).height(),
+        windowScrollValFromTop = $(this).scrollTop();
+    visibilityIds.forEach(function (item, index) {
+      //Call each class
+      try {
+        //avoid error if class not exist
+        elValFromTop[index] = Math.ceil($(item).offset().top);
+      } catch (err) {
+        return;
+      } // if the sum of the window height and scroll distance from the top is greater than the target element's distance from the top,
+      //it should be in view and the event should fire, otherwise reverse any previously applied methods
 
-  return '/';
-}
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
+      if (windowHeight + windowScrollValFromTop > elValFromTop[index]) {
+        counter_init(item);
       }
-    }
+    });
+  }
 
-    cssTimeout = null;
-  }, 50);
-}
+  function counter_init(groupId) {
+    var num,
+        speed,
+        direction,
+        index = 0;
+    $(counterClass).each(function () {
+      num = $(this).attr('data-TargetNum');
+      speed = $(this).attr('data-Speed');
+      direction = $(this).attr('data-Direction');
+      easing = $(this).attr('data-Easing');
+      if (speed == undefined) speed = defaultSpeed;
+      $(this).addClass('c_' + index); //add a class to recognize each counter
 
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+      doCount(num, index, speed, groupId, direction, easing);
+      index++;
+    });
+  }
+
+  function doCount(num, index, speed, groupClass, direction, easing) {
+    var className = groupClass + ' ' + counterClass + '.' + 'c_' + index;
+    if (easing == undefined) easing = 'swing';
+    $(className).animate({
+      num: num
+    }, {
+      duration: +speed,
+      easing: easing,
+      step: function step(now) {
+        if (direction == 'reverse') {
+          $(this).text(num - Math.floor(now));
+        } else {
+          $(this).text(Math.floor(now));
+        }
+      },
+      complete: doCount
+    });
+  }
+});
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -388,5 +396,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/index.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/multi-animated-counter.js"], null)
+//# sourceMappingURL=/multi-animated-counter.763943ff.js.map
