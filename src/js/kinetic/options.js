@@ -12,7 +12,7 @@ const options = [
       texture: [-0.965, -0.4, 0],
       mesh: [0, 0, 0],
     },
-    scale: [0.01, 0.04, 1],
+    scale: [0.01, 0.05, 1],
     shaders: {
       vertex: shaders.torusVertex,
       fragment: shaders.torusFragment,

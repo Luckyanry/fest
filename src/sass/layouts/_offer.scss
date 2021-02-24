@@ -9,6 +9,7 @@
   padding-bottom: 0;
 
   .content-box {
+    position: relative;
     &:first-child {
       margin-bottom: 100px;
     }
@@ -38,4 +39,9 @@
   .btn {
     margin-bottom: 100px;
   }
+}
+
+.offer .round-parallax {
+  bottom: -100px;
+  right: 0;
 }

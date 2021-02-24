@@ -5,9 +5,14 @@ export default new (class {
     })
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2.5))
     this.renderer.setSize(window.innerWidth, window.innerHeight)
-    this.renderer.setClearColor(0x04102f, 1)
+    this.renderer.setClearColor(0x04102f, 0)
 
-    this.camera = new THREE.PerspectiveCamera(85, window.innerWidth / window.innerHeight, 1, 5000)
+    let elWidth = window.innerWidth / 2
+    let elHeight = window.innerHeight / 2
+
+    console.log(elWidth, elHeight)
+
+    this.camera = new THREE.PerspectiveCamera(85, elWidth / elHeight, 1, 5000)
 
     this.camera.position.z = 1
     this.scene = new THREE.Scene()
@@ -48,8 +53,9 @@ export default new (class {
   }
 
   resize() {
-    let width = window.innerWidth
-    let height = window.innerHeight
+    let kineticWrap = document.querySelector('.kinetic-content')
+    let width = kineticWrap.innerWidth / 2
+    let height = kineticWrap.innerHeight / 2
 
     this.camera.aspect = width / height
     this.camera.updateProjectionMatrix()

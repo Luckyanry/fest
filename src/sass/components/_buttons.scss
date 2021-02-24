@@ -6,15 +6,17 @@
   font-family: inherit;
   padding: 13px 14px;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 3;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   transition: 0.3s linear;
   cursor: pointer;
+  outline: none;
 
   @include for-size(mobile) {
     padding: 13px 28px;
+    font-size: 12px;
   }
 
   @include for-size(desktop) {
@@ -35,7 +37,7 @@
 
     svg {
       transform: rotate(10deg);
-      transition: transform .15s;
+      transition: transform 0.15s;
     }
   }
 }
@@ -57,22 +59,6 @@
   position: relative;
   overflow: visible;
 
-  display: block;
-  height: 59px;
-  width: 320px;
-
-  font-size: 12px;
-  line-height: 32px;
-
-  @include for-size(tablet) {
-    height: 76px;
-    width: 392px;
-    padding: 0;
-
-    font-size: 16px;
-    line-height: 50px;
-  }
-
   .btn-text {
     margin-right: 45px;
   }
@@ -80,13 +66,13 @@
   svg {
     position: absolute;
     top: 14px;
-    right: 35px;
+    right: 25px;
 
     height: 30px;
     width: auto;
 
-    fill: #FFBE93;
-    transition: transform .15s linear;
+    fill: #ffbe93;
+    transition: transform 0.15s linear;
 
     @include for-size(tablet) {
       top: 23px;
@@ -97,10 +83,10 @@
     color: #ffffff;
     line-height: 28px;
 
-    background-color: #D14A00;
-    border: 2px solid #D14A00;
+    background-color: #d14a00;
+    border: 2px solid #d14a00;
 
-    animation: bounce-in .3s;
+    animation: bounce-in 0.3s;
     cursor: default;
 
     @include for-size(tablet) {
@@ -125,33 +111,50 @@
 }
 
 @keyframes flyaway {
-  0%   { transform: rotate(10deg);
-         top: 13px;
-         right: 25px;
-         height: 30px; }
-  5%   { transform: rotate(10deg);
-         top: 13px;
-         right: 0px;
-         height: 30px; }
-  20%   { transform: rotate(-20deg);
-          top: 13px;
-          right: -130px;
-          height: 45px; }  
-  40%   { transform: rotate(10deg);
-          top: -40px;
-          right: -280px;
-          opacity: 1; }
-  100% { transform: rotate(60deg);
-         top: -200px;
-         right: -1000px;
-         height: 0;
-         opacity: 0; }
+  0% {
+    transform: rotate(10deg);
+    top: 13px;
+    right: 25px;
+    height: 30px;
+  }
+  5% {
+    transform: rotate(10deg);
+    top: 13px;
+    right: 0px;
+    height: 30px;
+  }
+  20% {
+    transform: rotate(-20deg);
+    top: 13px;
+    right: -130px;
+    height: 45px;
+  }
+  40% {
+    transform: rotate(10deg);
+    top: -40px;
+    right: -280px;
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(60deg);
+    top: -200px;
+    right: -1000px;
+    height: 0;
+    opacity: 0;
+  }
 }
 
 @keyframes bounce-in {
-  0% { padding-left: 0; }
-  40% { padding-left: 45px; }
-  80% { padding-right: 20px; }
-  100% { padding-right: 0; }
+  0% {
+    padding-left: 0;
+  }
+  40% {
+    padding-left: 45px;
+  }
+  80% {
+    padding-right: 20px;
+  }
+  100% {
+    padding-right: 0;
+  }
 }
-
