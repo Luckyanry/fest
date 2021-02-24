@@ -59,23 +59,40 @@
   position: relative;
   overflow: visible;
 
+  width: 280px;
+  height: 62px;
+
+  font-size: 12px;
+
+  @include for-size(mobile) {
+    width: 392px;
+    height: 76px;
+
+    font-size: 16px;
+  }
+
   .btn-text {
-    margin-right: 45px;
+    margin-right: 40px;
+
+    @include for-size(mobile) {
+      margin-right: 45px;
+    }
   }
 
   svg {
     position: absolute;
     top: 14px;
-    right: 25px;
+    right: 16px;
 
-    height: 30px;
     width: auto;
+    height: 30px;
 
     fill: #ffbe93;
     transition: transform 0.15s linear;
 
-    @include for-size(tablet) {
+    @include for-size(mobile) {
       top: 23px;
+      right: 30px;
     }
   }
 
@@ -86,10 +103,10 @@
     background-color: #d14a00;
     border: 2px solid #d14a00;
 
-    animation: bounce-in 0.3s;
-    cursor: default;
-
-    @include for-size(tablet) {
+    // cursor: default;
+    
+    @include for-size(mobile) {
+      animation: bounce-in 0.3s;
       line-height: 50px;
     }
 

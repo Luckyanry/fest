@@ -8,6 +8,8 @@
   );
 
   @include for-size(tablet) {
+    padding-top: 244px;
+    
     background-image: linear-gradient(
       to top,
       var(--dark-bg) 0,
@@ -55,6 +57,7 @@
   @include for-size(tablet) {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 70px;
 
     @include for-size(tablet) {
       height: 100%;
