@@ -8,8 +8,22 @@
 
   .round-parallax {
     top: -50px;
-    right: 0;
+    right: 20px;
     transform: translateY(-100%);
+
+    display: block;
+    width: 150px;
+
+    @include for-size(tablet) {
+      top: -110px;
+      right: 150px;
+      width: 179px;
+    }
+
+    @include for-size(desktop) {
+      top: -60px;
+      right: 40px;
+    }
   }
 
   @include for-size(tablet) {

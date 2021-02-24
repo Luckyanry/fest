@@ -15,7 +15,7 @@ $(function () {
   getVisibilityStatus()
 
   function getVisibilityStatus() {
-    console.log('status')
+    // console.log('status')
     elValFromTop = []
     var windowHeight = $(window).height(),
       windowScrollValFromTop = $(this).scrollTop()
