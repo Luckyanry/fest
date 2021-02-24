@@ -1102,10 +1102,10 @@ img {
     background-position: center;
     background-size: contain;
   }
-  .what-is-item:nth-child(1) .item-summary:after {
+  .what-is-item:nth-child(2) .item-summary:after {
     background-image: url(/what-1.bfd8716b.png);
   }
-  .what-is-item:nth-child(2) .item-summary:after {
+  .what-is-item:nth-child(1) .item-summary:after {
     background-image: url(/what-2.dc1a4ae9.png);
   }
   .what-is-item:nth-child(3) .item-summary:after {
@@ -1132,10 +1132,10 @@ img {
     background-size: contain;
     line-height: 1;
   }
-  .what-is-item:nth-child(1) .item-summary:before {
+  .what-is-item:nth-child(2) .item-summary:before {
     background-image: url(/what-1.bfd8716b.png);
   }
-  .what-is-item:nth-child(2) .item-summary:before {
+  .what-is-item:nth-child(1) .item-summary:before {
     background-image: url(/what-2.dc1a4ae9.png);
   }
   .what-is-item:nth-child(3) .item-summary:before {
