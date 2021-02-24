@@ -12,7 +12,7 @@ const torusVertex = /* glsl */ `
 
     gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.);
   }
-`;
+`
 
 const torusFragment = /* glsl */ `
   varying vec2 vUv;
@@ -29,11 +29,11 @@ const torusFragment = /* glsl */ `
     vec3 texture = texture2D(uTexture, uv).rgb;
     // texture *= vec3(uv.x, uv.y, 0.);
 
-    float fog = clamp(vPosition.z / 0., 1., 1.);
+    float fog = clamp(vPosition.z / 0., 0.7, 1.);
     vec3 fragColor = mix(vec3(0.), texture, fog);
 
     gl_FragColor = vec4(fragColor, 1.);
   }
-`;
+`
 
-export default {torusVertex, torusFragment};
+export default { torusVertex, torusFragment }

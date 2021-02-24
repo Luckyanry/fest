@@ -100,6 +100,6 @@ export default class extends THREE.Object3D {
   }
 
   updateTime(time) {
-    this.material.uniforms.uTime.value = time
+    this.material.uniforms.uTime.value = time / 17
   }
 }

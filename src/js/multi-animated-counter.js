@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   let visibilityIds = ['#counters_1', '#counters_2', '#counters_3', '#info'] //must be an array, could have only one element
   let counterClass = '.counter'
   let defaultSpeed = 3000 //default value
@@ -6,9 +6,9 @@ $(function() {
   // END CONFIG
 
   //init if it becomes visible by scrolling
-  $(window).on('scroll', function() {
+  $(window).on('scroll', function () {
     getVisibilityStatus()
-    console.log('scroll')
+    // console.log('scroll')
   })
 
   //init if it's visible by page loading
@@ -20,7 +20,7 @@ $(function() {
     var windowHeight = $(window).height(),
       windowScrollValFromTop = $(this).scrollTop()
 
-    visibilityIds.forEach(function(item, index) {
+    visibilityIds.forEach(function (item, index) {
       //Call each class
       try {
         //avoid error if class not exist
@@ -41,7 +41,7 @@ $(function() {
       speed,
       direction,
       index = 0
-    $(counterClass).each(function() {
+    $(counterClass).each(function () {
       num = $(this).attr('data-TargetNum')
       speed = $(this).attr('data-Speed')
       direction = $(this).attr('data-Direction')
@@ -63,7 +63,7 @@ $(function() {
       {
         duration: +speed,
         easing: easing,
-        step: function(now) {
+        step: function (now) {
           if (direction == 'reverse') {
             $(this).text(num - Math.floor(now))
           } else {
