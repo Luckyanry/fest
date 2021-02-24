@@ -4325,14 +4325,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var options = [{
   word: 'IT FEST',
-  color: '#1D2F5D',
+  color: '#38508d',
   fill: '#04102f',
   geometry: new THREE.TorusKnotGeometry(9, 3, 768, 3, 4, 3),
   position: {
     texture: [-0.965, -0.4, 0],
     mesh: [0, 0, 0]
   },
-  scale: [0.01, 0.05, 1],
+  scale: [0.01, 0.03, 1],
   shaders: {
     vertex: _shaders.default.torusVertex,
     fragment: _shaders.default.torusFragment
@@ -4460,7 +4460,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52707" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56595" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

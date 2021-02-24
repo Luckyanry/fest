@@ -552,7 +552,17 @@ img {
   }
 }
 .js-btn--fly.clicked svg {
-  animation: flyaway 1.3s linear;
+  animation: flyaway-mobile 1.3s linear;
+}
+@media (min-width: 768px) {
+  .js-btn--fly.clicked svg {
+    animation: flyaway-tablet 1.3s linear;
+  }
+}
+@media (min-width: 1280px) {
+  .js-btn--fly.clicked svg {
+    animation: flyaway-desktop 1.3s linear;
+  }
 }
 
 .btn-icon {
@@ -566,7 +576,71 @@ img {
   margin: 0 auto;
 }
 
-@keyframes flyaway {
+@keyframes flyaway-mobile {
+  0% {
+    transform: rotate(0deg);
+    top: 13px;
+    height: 30px;
+  }
+  2% {
+    transform: rotate(-60deg);
+    top: 13px;
+    height: 30px;
+  }
+  20% {
+    transform: rotate(-50deg);
+    top: -13px;
+    right: 15px;
+    height: 45px;
+  }
+  40% {
+    transform: rotate(-40deg);
+    top: -40px;
+    right: 30px;
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-30deg);
+    top: -200px;
+    right: 10px;
+    height: 0;
+    opacity: 0;
+  }
+}
+@keyframes flyaway-tablet {
+  0% {
+    transform: rotate(10deg);
+    top: 13px;
+    right: 25px;
+    height: 30px;
+  }
+  5% {
+    transform: rotate(10deg);
+    top: 13px;
+    right: 0px;
+    height: 30px;
+  }
+  20% {
+    transform: rotate(-20deg);
+    top: 13px;
+    right: -130px;
+    height: 45px;
+  }
+  40% {
+    transform: rotate(10deg);
+    top: -80px;
+    right: -240px;
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(20deg);
+    top: -400px;
+    right: -340px;
+    height: 0;
+    opacity: 0;
+  }
+}
+@keyframes flyaway-desktop {
   0% {
     transform: rotate(10deg);
     top: 13px;
@@ -588,13 +662,13 @@ img {
   40% {
     transform: rotate(10deg);
     top: -40px;
-    right: -280px;
+    right: -240px;
     opacity: 1;
   }
   100% {
-    transform: rotate(60deg);
-    top: -200px;
-    right: -1000px;
+    transform: rotate(20deg);
+    top: -400px;
+    right: -920px;
     height: 0;
     opacity: 0;
   }
