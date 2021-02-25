@@ -5,7 +5,7 @@ import fontAtlas from '../../assets/Orbitron-Black.png'
 const options = [
   {
     word: 'IT FEST',
-    color: '#38508d',
+    color: '#798dc3',
     fill: '#04102f',
     geometry: new THREE.TorusKnotGeometry(9, 3, 768, 3, 4, 3),
     position: {
